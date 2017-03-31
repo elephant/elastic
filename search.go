@@ -294,6 +294,11 @@ func (s *SearchService) ExpandWildcards(expandWildcards string) *SearchService {
 	return s
 }
 
+// BuildURL builds the URL for the operation.
+func (s *SearchService) BuildURL() (string, url.Values, error) {
+	return s.buildURL()
+}
+
 // buildURL builds the URL for the operation.
 func (s *SearchService) buildURL() (string, url.Values, error) {
 	var err error
